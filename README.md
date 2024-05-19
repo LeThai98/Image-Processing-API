@@ -44,4 +44,13 @@
 ### Run project
     npm start
 
+### 4. Install ejs and sharp
+    npm install ejs
+    npm i --save-dev @types/ejs
+
+    npm install sharp
+    npm i --save-dev @types/sharp
+
+
+
 
