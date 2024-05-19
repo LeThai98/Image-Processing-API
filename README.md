@@ -27,3 +27,21 @@
    Exclude checking of node modules in tsconfig.json
         "exclude": ["node_modules"]
 
+## 3. Install Express
+### Terminal:
+    npm i express
+    npm i --save-dev @types/express
+    npm i --save-dev nodemon
+
+    Add 'start' to package.json file in the "script"
+        "start": "nodemon src/app.ts"
+
+### Create app.ts file in src directory
+
+### Build project
+    npm run build
+
+### Run project
+    npm start
+
+
