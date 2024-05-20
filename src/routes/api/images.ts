@@ -11,7 +11,8 @@ image.get('/', async (req: express.Request, res: express.Response) => {
     let imageName = (req.query?.name ?? '') as string;
     let width = (req.query?.width) as string;
     let height = (req.query?.height) as string;
-
+    console.log(imageName, width, height);
+    
     if (isNumeric(width) && isNumeric(height)) {
       const imageWidth = parseInt(width);
       const imageHeight = parseInt(height);
