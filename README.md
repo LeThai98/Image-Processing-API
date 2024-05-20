@@ -8,6 +8,12 @@
 # Run project
     npm start
 
+# Run Prettier
+    npm run prettier
+
+# Run ESLint
+    npx eslint .
+
 # Steps to Install and Configure Project
 ## 1.Install npm by Terminal
     npm init -y
