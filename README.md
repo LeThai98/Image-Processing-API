@@ -1,10 +1,18 @@
 # Image-Processing-API
  This is a simple placeholder API, the first allows you to place images into your frontend with the size set via URL parameters. The second use case is as a library to serve properly scaled versions of your images to the front end to reduce page load size. 
+ The project are using VietNam's beautiful images. It will help you discover Viet Nam through photos.
 
-# Install and Configure Project
-## 1.Install npm 
-    Terminal: npm init -y
-              npm i
+# Build project
+    npm run build
+
+# Run project
+    npm start
+
+# Steps to Install and Configure Project
+## 1.Install npm by Terminal
+    npm init -y
+    npm i
+    
 ## 2.Install Typescript
 ### Terminal:
     npm i --save-dev typescript
@@ -35,14 +43,6 @@
 
     Add 'start' to package.json file in the "script"
         "start": "nodemon src/app.ts"
-
-### Create app.ts file in src directory
-
-### Build project
-    npm run build
-
-### Run project
-    npm start
 
 ### 4. Install ejs and sharp
     npm install ejs
