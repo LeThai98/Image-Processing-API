@@ -8,11 +8,10 @@ const image = express.Router();
 
 image.get('/', async (req: express.Request, res: express.Response) => {
   try {
-    console.log(req);
     let imageName = (req.query?.name ?? '') as string;
     let width = (req.query?.width) as string;
     let height = (req.query?.height) as string;
-    console.log(height, width);
+
     if (isNumeric(width) && isNumeric(height)) {
       const imageWidth = parseInt(width);
       const imageHeight = parseInt(height);
@@ -25,7 +24,6 @@ image.get('/', async (req: express.Request, res: express.Response) => {
       res.sendFile(path.resolve(thumpPath));
     } else {
       res.render('Error' , {message: 'The inputed URL is not correct !!!.'});
-    
     } 
   } catch (error) {
     console.log(error);
