@@ -1,6 +1,6 @@
 # Image-Processing-API
  This is a simple placeholder API, the first allows you to place images into your frontend with the size set via URL parameters. The second use case is as a library to serve properly scaled versions of your images to the front end to reduce page load size. 
- The project are using VietNam's beautiful images. It will help you discover Viet Nam through photos.
+ The project's using VietNam's beautiful images. It will help you discover Viet Nam through photos.
 
 # Build project
     npm run build
@@ -12,7 +12,7 @@
 ## 1.Install npm by Terminal
     npm init -y
     npm i
-    
+
 ## 2.Install Typescript
 ### Terminal:
     npm i --save-dev typescript
@@ -51,6 +51,27 @@
     npm install sharp
     npm i --save-dev @types/sharp
 
+### 5. Install, configure Formatting
+    npm i prettier
+    Run the command on git bash: touch .prettierrc
+
+    Configure .prettierrc file: 
+        {
+            "semi": true,
+            "singleQuote": true,
+            "trailingComma": "none",
+            "printWidth": 80
+        }
+    
+    Add script: "prettier" to package.json file
+        *** if using Mac, use this script:
+            "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write"
+
+        *** if using Window, use this script:
+            "prettier": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.ts\""
+
+    Run Prettier
+        npm run prettier
 
 
 

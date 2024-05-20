@@ -13,6 +13,7 @@
     "typescript": "^5.4.5"
   },
   "scripts": {
+    "prettier": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.ts\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx tsc",
     "start": "nodemon src/app.ts"
@@ -23,6 +24,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "prettier": "^3.2.5",
     "sharp": "^0.33.4"
   }
 }
