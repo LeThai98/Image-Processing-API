@@ -73,5 +73,24 @@
     Run Prettier
         npm run prettier
 
+### 6. Install and configure ESLint
+    Docs: https://typescript-eslint.io/getting-started/ 
+    1. Terminal: 
+        npm install --save-dev eslint @eslint/js typescript typescript-eslint
+
+    2. Create an eslint.config.js: npm init @eslint/config
+    
+    3. Modify eslint.config.js file :
+        import eslint from '@eslint/js';
+        import tseslint from 'typescript-eslint';
+
+        export default tseslint.config(
+        eslint.configs.recommended,
+        ...tseslint.configs.recommended,
+        );
+    
+    4. Running ESLint
+        npx eslint .
+
 
 

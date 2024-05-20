@@ -4,13 +4,17 @@
   "description": "This is a simple placeholder API, the first allows you to place images into your frontend with the size set via URL parameters. The second use case is as a library to serve properly scaled versions of your images to the front end to reduce page load size.",
   "main": "index.js",
   "devDependencies": {
+    "@eslint/js": "^9.3.0",
     "@types/ejs": "^3.1.5",
     "@types/express": "^4.17.21",
     "@types/node": "^20.12.12",
     "@types/sharp": "^0.32.0",
+    "eslint": "^8.57.0",
+    "globals": "^15.3.0",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.9.0"
   },
   "scripts": {
     "prettier": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.ts\"",

@@ -8,9 +8,9 @@ const image = express.Router();
 
 image.get('/', async (req: express.Request, res: express.Response) => {
     try {
-        let imageName = (req.query?.name ?? '') as string;
-        let width = req.query?.width as string;
-        let height = req.query?.height as string;
+        const imageName = (req.query?.name ?? '') as string;
+        const width = req.query?.width as string;
+        const height = req.query?.height as string;
         console.log(imageName, width, height);
 
         if (isNumeric(width) && isNumeric(height)) {
@@ -60,7 +60,7 @@ const resizedImageThumpPath = (
     return `src/Public/Image/thumbWithResize/${name}${height}x${width}.jpg`;
 };
 
-let isNumeric = (value: string): boolean => {
+const isNumeric = (value: string): boolean => {
     return !isNaN(Number(value));
 };
 
