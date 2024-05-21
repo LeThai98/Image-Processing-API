@@ -1,8 +1,8 @@
 import express from 'express';
 import path from 'path';
-import sharp from 'sharp';
 import fs from 'fs';
 import promises from 'fs/promises';
+import { resizeImage, resizedImageThumpPath } from '../../../utils/image.service';
 
 const image = express.Router();
 
@@ -41,24 +41,6 @@ image.get('/', async (req: express.Request, res: express.Response) => {
         res.render('Error', { message: 'The error from Server!!!.' });
     }
 });
-
-const resizeImage = (
-    name: string,
-    width: number,
-    height: number
-): Promise<Buffer> => {
-    return sharp(path.resolve(`src/Public/Image/full/${name}.jpg`))
-        .resize({ width: width, height: height, fit: sharp.fit.cover })
-        .toBuffer();
-};
-
-const resizedImageThumpPath = (
-    name: string,
-    width: number,
-    height: number
-): string => {
-    return `src/Public/Image/thumbWithResize/${name}${height}x${width}.jpg`;
-};
 
 const isNumeric = (value: string): boolean => {
     return !isNaN(Number(value));
