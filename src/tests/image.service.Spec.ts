@@ -1,4 +1,4 @@
-import { resizeImage, resizedImageThumpPath } from '../../utils/image.service';
+import { resizeImage } from '../../utils/image.service';
 
 describe('Testing image service', () => {
     it('Return the correct image if provide the correct name of image', async () => {
