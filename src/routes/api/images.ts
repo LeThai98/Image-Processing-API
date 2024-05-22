@@ -2,7 +2,10 @@ import express from 'express';
 import path from 'path';
 import fs from 'fs';
 import promises from 'fs/promises';
-import { resizeImage, resizedImageThumpPath } from '../../../utils/image.service';
+import {
+    resizeImage,
+    resizedImageThumpPath,
+} from '../../../utils/image.service';
 
 const image = express.Router();
 
