@@ -39,7 +39,7 @@ image.get('/', async (req: express.Request, res: express.Response) => {
                 message: 'The inputed URL is not correct !!!.',
             });
         }
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.log(error);
         res.render('Error', { message: 'The error from Server!!!.' });
     }
