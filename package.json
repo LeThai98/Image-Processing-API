@@ -7,8 +7,10 @@
     "@eslint/js": "^9.3.0",
     "@types/ejs": "^3.1.5",
     "@types/express": "^4.17.21",
+    "@types/jasmine": "^5.1.4",
     "@types/node": "^20.12.12",
     "@types/sharp": "^0.32.0",
+    "@types/supertest": "^6.0.2",
     "eslint": "^8.57.0",
     "globals": "^15.3.0",
     "nodemon": "^3.1.0",
@@ -18,7 +20,9 @@
   },
   "scripts": {
     "prettier": "prettier --single-quote --trailing-comma es5 --write \"src/**/*.ts\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "jasmine": "jasmine",
+    "copy-assets": "ts-node src/utils/copyAssets",
+    "test": "npm run build && npm run jasmine",
     "build": "npx tsc",
     "start": "nodemon src/app.ts"
   },
@@ -28,7 +32,10 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "jasmine": "^5.1.0",
+    "jasmine-spec-reporter": "^7.0.0",
     "prettier": "^3.2.5",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "supertest": "^7.0.0"
   }
 }

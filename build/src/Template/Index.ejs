@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Image Processing API</title>
+</head>
+<body>
+  <h1 style="text-align: center; color: burlywood;">Image Resizing API</h1>
+  <h3>
+    Welcome to the Image Resizing API - the API help to resize the beautiful images of Viet Nam.
+    Please follow the instructions below to resize an image:
+  </h3>
+  <p>
+    http://localhost:3000/api/image?name=<span style="color: cornflowerblue;">IMAGENAME</span>&width=<span  style="color: cornflowerblue;" >WIDTH</span>&height=<span  style="color: cornflowerblue;">HEIGHT</span>
+  </p>
+
+  <ul>
+    <li>ImageName: select one of  the available images below</li>
+    <li>Width: width of the Image(is Integer)</li>
+    <li>Height: height of the Image(is Integer) </li>
+  </ul>
+
+  <div style="display: grid; grid-gap: 20px; grid-template-columns: 2fr 2fr 2fr;">
+    <% imageNames.forEach((imageName) => { %>
+      <div style="display: flex; flex-direction: column; ">
+        <img src=<%= 'Image/full/' + imageName + '.jpg' %> style="height: 300px; width: 400px"/>
+        <%= `imageName: ${imageName}` %> 
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

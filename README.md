@@ -14,6 +14,9 @@
 # Run ESLint
     npx eslint .
 
+# Run Unit test
+    npm run test
+
 # Steps to Install and Configure Project
 ## 1.Install npm by Terminal
     npm init -y
@@ -97,6 +100,30 @@
     
     4. Running ESLint
         npx eslint .
+
+### 7. Install configure Unit test
+    Jasmine:
+        npm i jasmine
+        npm i jasmine-spec-reporter
+        npm i --save-dev @types/jasmine
+
+        Find the scripts object in the package.json and add the following to run jasmine:
+            "jasmine": "jasmine"
+        
+        Add and configure jasmine.json, indexSpec.ts, reporter.ts file
+
+        In the tsconfig.json file, add "spec" to the list of folders that we want to exclude.
+            "exclude": ["node_modules", "./build", "spec"]
+        
+        Find the scripts object in the package.json and add the following to run jasmine:
+            "test": "npm run build && npm run jasmine"
+        
+    Install Supertest
+        npm i supertest
+        npm i --save-dev @types/supertest
+
+    Run Testing: npm run test
+
 
 
 
