@@ -11,7 +11,7 @@ lerna-debug.log*
 .env.test
 
 # Dependency directories
-#node_modules/
+node_modules/
 
 #dist
 /dist
