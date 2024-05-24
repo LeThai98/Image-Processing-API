@@ -124,6 +124,10 @@
 
     Run Testing: npm run test
 
+### 7. Work with Postgres
+    node-postgres : npm install pg
+    tsc-watch: npm install --save-dev tsc-watch
+    dotenv: npm i dotenv  OR  yarn add dotenv 
 
 
 

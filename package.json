@@ -15,6 +15,7 @@
     "globals": "^15.3.0",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
+    "tsc-watch": "^6.2.0",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.9.0"
   },
@@ -24,13 +25,15 @@
     "copy-assets": "ts-node src/utils/copyAssets",
     "test": "npm run build && npm run jasmine",
     "build": "npx tsc",
-    "start": "nodemon src/app.ts"
+    "start": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "pg": "^8.11.5",
     "sharp": "^0.33.4"
   }
 }
