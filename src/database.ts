@@ -1,7 +1,7 @@
-import exp from 'constants';
 import dotenv from 'dotenv';
 import Pool from 'pg';
 
+//The dotenv.config() line initializes the environment variables.
 dotenv.config();
 
 const {
@@ -9,15 +9,14 @@ const {
     DB_HOST,
     DB_NAME,
     DB_PASS,
-    DB_PORT
 } = process.env;
 
+//pool is a connection to the database.
 const client = new Pool.Pool({
     user: DB_USER,
     host: DB_HOST,
     database: DB_NAME,
-    password: DB_PASS,
-    port: DB_PORT
+    password: DB_PASS
 });
 
 export default client;

@@ -125,9 +125,40 @@
     Run Testing: npm run test
 
 ### 7. Work with Postgres
-    node-postgres : npm install pg
+    node-postgres : 
+        npm install pg
+        npm i --save-dev @types/pg
     tsc-watch: npm install --save-dev tsc-watch
     dotenv: npm i dotenv  OR  yarn add dotenv 
 
+## 8. Install Migration DB
+    Install the global package:  npm install -g db-migrate
+    Install yarn: npm install -g yarn
+    Install the package to the project:  yarn add db-migrate db-migrate-pg
+    Install and Configure databse.json file:
+        {
+            "dev": {
+            "driver": "pg",
+            "host": "localhost",
+            "database": "my_db",
+            "user": "postgres",
+            "password": "123"
+            },
+            "test": {
+            "driver": "pg",
+            "host": "127.0.0.1",
+            "database": "fantasy_worlds_test",
+            "user": "test_user",
+            "password": "password123"
+            }
+        }
+    
+    Create Migration: 
+        db-migrate create mythical-worlds-table --sql-file
 
+    Add the SQL you need to the up and down sql files
+
+    Bring the migration up db-migrate up:  db-migrate up --env dev
+
+    Bring the migration down: db-migrate down --env dev
 
