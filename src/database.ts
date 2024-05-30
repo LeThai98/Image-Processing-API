@@ -1,22 +1,37 @@
 import dotenv from 'dotenv';
-import Pool from 'pg';
+import {Pool} from 'pg';
 
 //The dotenv.config() line initializes the environment variables.
 dotenv.config();
 
 const {
-    DB_USER,
-    DB_HOST,
-    DB_NAME,
-    DB_PASS,
-} = process.env;
+    POSTGRES_HOST,
+    POSTGRES_DB,
+    POSTGRES_USER,
+    POSTGRES_PASSWORD,
+    POSTGRES_TEST_DB,
+    ENV,
+  } = process.env
+  console.log(ENV)
 
+  let client;
 //pool is a connection to the database.
-const client = new Pool.Pool({
-    user: DB_USER,
-    host: DB_HOST,
-    database: DB_NAME,
-    password: DB_PASS
-});
-
-export default client;
+  if(ENV === 'test') {
+    client = new Pool({
+      host: POSTGRES_HOST,
+      database: POSTGRES_TEST_DB,
+      user: POSTGRES_USER,
+      password: POSTGRES_PASSWORD,
+    })
+  }
+  
+  if(ENV === 'dev') {
+    client = new Pool({
+      host: POSTGRES_HOST,
+      database: POSTGRES_DB,
+      user: POSTGRES_USER,
+      password: POSTGRES_PASSWORD,
+    })
+  }
+  
+  export default client
